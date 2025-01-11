@@ -1,0 +1,53 @@
+---
+import hljs from "highlight.js";
+
+hljs.registerLanguage("cyrus", {
+  name: "Cyrus",
+  keywords: {
+    keyword: "pub fn main return",
+    literal: "i32",
+  },
+  contains: [
+    {
+      className: "comment",
+      begin: "#",
+      end: "$",
+    },
+    {
+      className: "number",
+      begin: "\\b\\d+\\b", // Match integers
+    },
+    {
+      className: "function",
+      beginKeywords: "fn",
+      end: ":",
+      excludeEnd: true,
+    },
+    {
+      className: "title.function",
+      begin: /[A-Za-z_]\w*/, // Match function names
+      relevance: 0,
+    },
+    {
+      className: "params",
+      begin: "\\(",
+      end: "\\)",
+      contains: [hljs.inherit(hljs.C_NUMBER_MODE)],
+    },
+    {
+      className: "variable",
+      begin: "#\\b\\w+\\b", // Match variables prefixed with '#'
+    },
+    {
+      className: "built_in",
+      begin: "cprintf",
+    },
+  ],
+});
+
+hljs.highlightAll();
+---
+
+<code lang="cyrus">
+    <slog/>
+</code>

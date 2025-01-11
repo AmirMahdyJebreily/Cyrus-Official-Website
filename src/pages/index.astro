@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LogoTransparent from "../assets/logo.png";
 import { Image } from "astro:assets";
+import LogoTransparent from "../assets/logo.png";
+import ExampleCode1 from "../assets/example-code-1.png";
 ---
 
 <Layout>
@@ -30,6 +31,84 @@ import { Image } from "astro:assets";
         ancient wisdom, powered by modern technology.
       </h2>
     </div>
+    <div class="flex flex-row gap-10 justify-between mx-auto mt-8">
+      <div class="flex items-center gap-2 text-sm text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-cpu h-4 w-4 text-[#8c533b]"
+          ><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect
+            width="6"
+            height="6"
+            x="9"
+            y="9"
+            rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"
+          ></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path
+            d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"
+          ></path><path d="M9 20v2"></path></svg
+        ><span>GCCJIT Powered</span>
+      </div><div class="flex items-center gap-2 text-sm text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-globe h-4 w-4 text-[#8c533b]"
+          ><circle cx="12" cy="12" r="10"></circle><path
+            d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
+            d="M2 12h20"></path></svg
+        ><span>Cross-Platform</span>
+      </div><div class="flex items-center gap-2 text-sm text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-sparkles h-4 w-4 text-[#8c533b]"
+          ><path
+            d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+          ></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path
+            d="M4 17v2"></path><path d="M5 18H3"></path></svg
+        ><span>Zero-Cost Abstractions</span>
+      </div><div class="flex items-center gap-2 text-sm text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-binary h-4 w-4 text-[#8c533b]"
+          ><rect x="14" y="14" width="4" height="6" rx="2"></rect><rect
+            x="6"
+            y="4"
+            width="4"
+            height="6"
+            rx="2"></rect><path d="M6 20h4"></path><path d="M14 10h4"
+          ></path><path d="M6 14h2v6"></path><path d="M14 4h2v6"></path></svg
+        ><span>Native Performance</span>
+      </div>
+    </div>
     <div class="flex flex-row gap-3 mt-5">
       <button class="btn btn-primary">
         Download Cyrus
@@ -48,6 +127,45 @@ import { Image } from "astro:assets";
         >
       </button>
       <button class="btn btn-solid-primary">View Documentation</button>
+    </div>
+
+    <hr class="border-t-red-1 w-full mt-12 mb-8" />
+
+    <div class="flex flex-row items-center gap-5">
+      <div class="flex flex-col gap-10">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-[#8c533b]">100x</div><div
+            class="text-sm text-gray-400"
+          >
+            Faster Than Python
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-[#8c533b]">0 MB</div><div
+            class="text-sm text-gray-400"
+          >
+            Runtime Overhead
+          </div>
+        </div><div class="text-center">
+          <div class="text-3xl font-bold text-[#8c533b]">100%</div><div
+            class="text-sm text-gray-400"
+          >
+            C Compatible
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-[#8c533b]">∞</div><div
+            class="text-sm text-gray-400"
+          >
+            Possibilities
+          </div>
+        </div>
+      </div>
+      <Image
+        class="border-2 border-primary rounded-xl"
+        src={ExampleCode1}
+        alt="Example Cyrus Code"
+      />
     </div>
   </div>
 
@@ -81,5 +199,5 @@ import { Image } from "astro:assets";
         -webkit-text-fill-color: transparent;
       }
     }
-  </style></Layout
->
+  </style>
+</Layout>

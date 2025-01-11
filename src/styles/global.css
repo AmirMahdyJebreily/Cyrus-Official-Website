@@ -22,6 +22,14 @@
   src: url(../assets/fonts/Vazirmatn.ttf);
 }
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 html,
 body {
   font-family: "Poppins";
@@ -29,9 +37,13 @@ body {
 
 .btn-solid-primary {
   background: transparent !important;
-  @apply bg-transparent focus:bg-secondary hover:bg-secondary !important;
+  @apply text-white bg-transparent focus:bg-secondary hover:bg-secondary !important;
 }
 
 .navbar .navbar-item {
-  @apply hover:text-primary
+  @apply hover:text-primary text-white
+}
+
+.btn-primary {
+  @apply text-white hover:text-white !important;
 }

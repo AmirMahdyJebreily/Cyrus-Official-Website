@@ -1,7 +1,70 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import LogoTransparent from "../assets/logo.png";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
-	<h1>Home page</h1>
-</Layout>
+  <div
+    class="hero w-full py-20 flex flex-col gap-7 justify-center items-center"
+  >
+    <Image
+      class="hero-image"
+      src={LogoTransparent}
+      alt="Cyrus Logo Transparent"
+    />
+    <div class="hero-badges flex flex-row gap-5">
+      <span class="badge badge-outline-primary bg-primary bg-opacity-25"
+        >Version 0.0.1 Beta</span
+      >
+      <span class="badge badge-outline-primary bg-primary bg-opacity-25"
+        >Made for the Future</span
+      >
+    </div>
+    <div class="flex flex-col justify-center text-center">
+      <h1 class="hero-slogan font-jersey15">
+        A programming language for Aliens.
+      </h1>
+      <h2 class="hero-intro-text text-gray-400">
+        Built for developers who demand extraordinary performance. Inspired by
+        ancient wisdom, powered by modern technology.
+      </h2>
+    </div>
+	<div class="flex flex-row gap-3 mt-5">
+		<button class="btn btn-primary">Download Cyrus</button>
+		<button class="btn btn-solid-primary">View Documentation</button>
+	</div>
+  </div>
+
+  <style lang="scss">
+    .hero {
+      .hero-image {
+        width: 180px;
+        display: block;
+        opacity: 0.8;
+      }
+      .hero-badges {
+        position: relative;
+        bottom: -35px;
+      }
+      .hero-intro-text {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+      }
+      .hero-slogan {
+        max-width: 1100px;
+        font-size: 72px;
+        background: rgb(245, 245, 245);
+        background: linear-gradient(
+          90deg,
+          rgba(245, 245, 245, 1) 0%,
+          rgba(140, 83, 59, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  </style></Layout
+>

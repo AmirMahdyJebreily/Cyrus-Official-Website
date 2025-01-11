@@ -69,4 +69,41 @@ body {
 .section-container {
   width: 1300px;
   max-width: auto;
+  @media screen and (max-width: 1400px) {
+    &{
+      width: 80%;
+    }
+  }
+}
+
+// Response header
+@media screen and (max-width: 1200px) {
+  .header .navbar nav, .header .navbar-end {
+    display: none !important;
+  }
+
+  .header .navbar .navbar-end--mobile{
+    display: block;
+  }
+
+  .navbar {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .navbar .navbar-end--mobile{
+    display: none;
+  }
+}
+
+.flexible-grid-box {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 1200px) {
+    display: grid;
+    flex-direction: unset;
+    grid-template-columns: 50% 50%;
+  }
 }

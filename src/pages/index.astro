@@ -7,15 +7,15 @@ import ExampleCode1 from "../assets/example-code-1.png";
 
 <BlankLayout>
   <div
-    class="hero w-full py-20 flex flex-col gap-7 justify-center items-center"
+    class="hero w-full py-24 flex flex-col gap-7 justify-center items-center"
   >
     <div class="hero-background-shade"></div>
 
     <div class="header z-20 justify-center flex">
       <div class="container">
-        <div class="navbar bg-transparent py-5">
+        <div class="navbar shadow-none bg-transparent py-5">
           <div class="navbar-start w-full">
-            <a class="navbar-item font-poppins font-bold">Cyrus Lang</a>
+            <a href="/" class="navbar-item font-poppins font-bold">Cyrus Lang</a>
             <a class="navbar-item">Blog</a>
             <a class="navbar-item">Install</a>
             <a class="navbar-item">Sponsors</a>
@@ -251,8 +251,8 @@ import ExampleCode1 from "../assets/example-code-1.png";
   .hero {
     position: relative;
     background-image: url(../assets/hero-background.webp);
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .header {
       position: absolute;
@@ -268,7 +268,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
       background: rgb(20, 10, 5);
       background: linear-gradient(
         0deg,
-        rgba(20, 10, 5, 0.534) 0%,
+        rgba(20, 10, 5, 0.596) 0%,
         rgba(20, 10, 5, 1) 100%
       );
     }
@@ -276,7 +276,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
     .hero-logo {
       width: 180px;
       display: block;
-	  margin-top: 40px;
+      margin-top: 40px;
     }
     .hero-badges {
       position: relative;
@@ -292,11 +292,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
       max-width: 1100px;
       font-size: 72px;
       background: rgb(245, 245, 245);
-      background: linear-gradient(
-        90deg,
-        #f5f5f5 0%,
-        #eb7b4b 100%
-      );
+      background: linear-gradient(90deg, #f5f5f5 0%, #eb7b4b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

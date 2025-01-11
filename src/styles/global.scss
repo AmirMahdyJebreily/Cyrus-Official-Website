@@ -45,8 +45,12 @@ body {
 }
 
 .btn-solid-primary {
-  background: transparent !important;
-  @apply text-white bg-transparent focus:bg-secondary hover:bg-secondary !important;
+  @apply text-white !important;
+  &,
+  &:hover,
+  &:focus {
+    background: rgba(158, 158, 158, 0.17) !important;
+  }
 }
 
 .navbar .navbar-item {

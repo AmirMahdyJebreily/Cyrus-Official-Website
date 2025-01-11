@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Jersey15";
+  src: url(../assets/fonts/Jersey15-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../assets/fonts/Vazirmatn.ttf);
+}
+
+html,
+body {
+  font-family: "Poppins";
+}
+
+.btn-solid-primary {
+  background: transparent !important;
+  @apply bg-transparent focus:bg-secondary hover:bg-secondary !important;
+}
+
+.navbar .navbar-item {
+  @apply hover:text-primary
+}

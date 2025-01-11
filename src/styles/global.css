@@ -35,6 +35,10 @@ body {
   font-family: "Poppins";
 }
 
+.btn {
+  border-radius: 5px !important;
+}
+
 .btn-solid-primary {
   background: transparent !important;
   @apply text-white bg-transparent focus:bg-secondary hover:bg-secondary !important;

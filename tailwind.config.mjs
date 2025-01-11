@@ -17,6 +17,7 @@ export default {
         themeName: "light",
         colorScheme: "light",
         colors: {
+          border: "#000000",
           primary: "#8c533b",
           secondary: "#d1d1d1",
           backgroundPrimary: "#ffffff",
@@ -26,6 +27,7 @@ export default {
         themeName: "dark",
         colorScheme: "dark",
         colors: {
+          border: "#ffffff",
           primary: "#8c533b",
           secondary: "#171717",
           backgroundPrimary: "#000000",

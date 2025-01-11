@@ -22,7 +22,7 @@
   src: url(../assets/fonts/Vazirmatn.ttf);
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,6 +37,11 @@ body {
 
 .btn {
   border-radius: 5px !important;
+  &,
+  &:hover,
+  &:focus {
+    outline: none !important;
+  }
 }
 
 .btn-solid-primary {
@@ -45,9 +50,19 @@ body {
 }
 
 .navbar .navbar-item {
-  @apply hover:text-primary text-white
+  @apply hover:text-primary text-white;
 }
 
 .btn-primary {
   @apply text-white hover:text-white !important;
+}
+
+.section-separator {
+  border-color: rgb(var(--border) / 10%) !important;
+  @apply w-full;
+}
+
+.section-container {
+  width: 1300px;
+  max-width: auto;
 }

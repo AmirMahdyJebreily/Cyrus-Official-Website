@@ -1,8 +1,8 @@
-<div class="header justify-center flex">
+<div class="header z-20 justify-center flex">
   <div class="container">
-    <div class="navbar bg-transparent py-5">
+    <div class="navbar shadow-none bg-transparent py-5">
       <div class="navbar-start w-full">
-        <a class="navbar-item font-poppins font-bold">Cyrus Lang</a>
+        <a href="/" class="navbar-item font-poppins font-bold">Cyrus Lang</a>
         <nav>
           <a class="navbar-item">Blog</a>
           <a class="navbar-item">Install</a>
@@ -15,6 +15,24 @@
         <a class="navbar-item btn btn-solid-primary px-5">Donate ☕️</a>
         <a class="navbar-item btn btn-primary px-5">Get Started</a>
       </div>
+      <div class="navbar-end--mobile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="fill-white w-6 cursor-pointer"
+          ><path
+            d="M0,4c0-.55,.45-1,1-1H18c.55,0,1,.45,1,1s-.45,1-1,1H1c-.55,0-1-.45-1-1Zm18,15H1c-.55,0-1,.45-1,1s.45,1,1,1H18c.55,0,1-.45,1-1s-.45-1-1-1Zm5-8H6c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1s-.45-1-1-1Z"
+          ></path></svg
+        >
+      </div>
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+</style>

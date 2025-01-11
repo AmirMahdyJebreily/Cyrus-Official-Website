@@ -3,46 +3,16 @@ import BlankLayout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import LogoTransparent from "../assets/logo.png";
 import ExampleCode1 from "../assets/example-code-1.png";
+import Header from "../components/Header.astro";
 ---
 
 <BlankLayout>
   <div
     class="hero w-full py-24 flex flex-col gap-7 justify-center items-center"
   >
+    <Header />
+
     <div class="hero-background-shade"></div>
-
-    <div class="header z-20 justify-center flex">
-      <div class="container">
-        <div class="navbar shadow-none bg-transparent py-5">
-          <div class="navbar-start w-full">
-            <a href="/" class="navbar-item font-poppins font-bold">Cyrus Lang</a
-            >
-            <nav>
-              <a class="navbar-item">Blog</a>
-              <a class="navbar-item">Install</a>
-              <a class="navbar-item">Sponsors</a>
-              <a class="navbar-item">Community</a>
-              <a class="navbar-item">Documentations</a>
-            </nav>
-          </div>
-          <div class="navbar-end flex gap-3 w-1/3">
-            <a class="navbar-item btn btn-solid-primary px-5">Donate ☕️</a>
-            <a class="navbar-item btn btn-primary px-5">Get Started</a>
-          </div>
-          <div class="navbar-end--mobile">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="fill-white w-6 cursor-pointer"
-              ><path
-                d="M0,4c0-.55,.45-1,1-1H18c.55,0,1,.45,1,1s-.45,1-1,1H1c-.55,0-1-.45-1-1Zm18,15H1c-.55,0-1,.45-1,1s.45,1,1,1H18c.55,0,1-.45,1-1s-.45-1-1-1Zm5-8H6c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1s-.45-1-1-1Z"
-              ></path></svg
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
     <Image
       class="hero-logo z-20"
       src={LogoTransparent}
@@ -186,7 +156,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
         ></path>
       </svg>
       <div class="text-md md:text-xl text-white font-bold">Blazing Fast</div>
-      <div class="text-sm text-gray-400">Optimized for performance</div>
+      <div class="text-sm text-gray-400 mt-2">Optimized for performance</div>
     </div>
 
     <div class="text-center">
@@ -200,7 +170,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
         ></path>
       </svg>
       <div class="text-md md:text-xl text-white font-bold">Lightweight</div>
-      <div class="text-sm text-gray-400">Minimal runtime overhead</div>
+      <div class="text-sm text-gray-400 mt-2">Minimal runtime overhead</div>
     </div>
 
     <div class="text-center">
@@ -216,7 +186,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
       <div class="text-md md:text-xl text-white font-bold">
         Seamless Integration
       </div>
-      <div class="text-sm text-gray-400">Works seamlessly with C/C++</div>
+      <div class="text-sm text-gray-400 mt-2">Works seamlessly with C/C++</div>
     </div>
 
     <div class="text-center">
@@ -231,7 +201,7 @@ import ExampleCode1 from "../assets/example-code-1.png";
       <div class="text-md md:text-xl text-white font-bold">
         Limitless Potential
       </div>
-      <div class="text-sm text-gray-400">Unlock endless possibilities</div>
+      <div class="text-sm text-gray-400 mt-2">Unlock endless possibilities</div>
     </div>
   </div>
 
@@ -262,7 +232,9 @@ import ExampleCode1 from "../assets/example-code-1.png";
   <hr class="section-separator mt-12 mb-8" />
 
   <div class="w-full py-10 text-center flex flex-col justify-center">
-    <h1 class="font-bold text-xl md:text-5xl mb-5">Ready to Begin Your Journey?</h1>
+    <h1 class="font-bold text-xl md:text-5xl mb-5">
+      Ready to Begin Your Journey?
+    </h1>
     <span class="text-gray-400 px-5"
       >Join the community of developers building the future with Cyrus.</span
     >
@@ -296,14 +268,9 @@ import ExampleCode1 from "../assets/example-code-1.png";
     position: relative;
     background-image: url(../assets/hero-background.webp);
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-
-    .header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
 
     .hero-background-shade {
       width: 100%;

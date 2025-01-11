@@ -14,16 +14,6 @@ export default {
   rippleui: {
     themes: [
       {
-        themeName: "light",
-        colorScheme: "light",
-        colors: {
-          border: "#000000",
-          primary: "#8c533b",
-          secondary: "#d1d1d1",
-          backgroundPrimary: "#ffffff",
-        },
-      },
-      {
         themeName: "dark",
         colorScheme: "dark",
         colors: {

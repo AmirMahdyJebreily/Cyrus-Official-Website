@@ -30,6 +30,10 @@
   -webkit-user-drag: none;
 }
 
+a {
+  color: rgb(var(--primary));
+}
+
 html,
 body {
   font-family: "Poppins";

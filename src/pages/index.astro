@@ -14,74 +14,109 @@ import BoltIcon from "../components/icons/bolt-icon.astro";
 import FeatherIcon from "../components/icons/feather-icon.astro";
 import IntegrationIcon from "../components/icons/integration-icon.astro";
 import RocketIcon from "../components/icons/rocket-icon.astro";
+import HeroHeader from "../components/HeroHeader.astro";
 ---
 
 <BlankLayout>
-  <div
-    class="hero w-full py-24 flex flex-col gap-7 justify-center items-center"
-  >
-    <Header />
-
-    <div class="hero-background-shade"></div>
-    <Image
-      class="hero-logo z-20"
-      src={LogoTransparent}
-      alt="Cyrus Logo Transparent"
-    />
-
-    <div class="flex flex-col z-20 justify-center text-center">
-      <h1 class="hero-slogan font-jersey15">
-        A programming language for Aliens.
-      </h1>
-      <h2 class="hero-intro-text text-white">
-        Built for developers who demand extraordinary performance. Inspired by
-        ancient wisdom, powered by modern technology.
-      </h2>
-    </div>
-
+  <HeroHeader>
     <div
-      class="hero-badges z-20 flex flex-row sm:gap-5 gap-3 flex-wrap items-center justify-center"
+      class="grid lg:grid-cols-2 lg:grid-rows-none grid-cols-1 grid-rows-2 justify-center items-center lg:py-6 py-2"
     >
-      <span
-        class="badge badge-outline-primary text-[#ff8f5f] bg-[#eb7b4b] bg-opacity-25"
-        >Version 0.0.1 - Beta</span
+      <div
+        class="z-20 lg:w-10/12 w-full ps-6 flex flex-col items-center justify-center lg:justify-self-end"
       >
-      <span
-        class="badge badge-outline-primary text-[#ff8f5f] bg-[#eb7b4b] bg-opacity-25"
-        >Made for the Future</span
-      >
+        <div
+          class="flex flex-col lg:items-start items-center justify-center w-full py-6"
+        >
+          <Image
+            class="hero-logo z-20"
+            src={LogoTransparent}
+            alt="Cyrus Logo Transparent"
+          />
+
+          <h1 class="hero-slogan font-jersey15">
+            A programming language for Aliens.
+          </h1>
+        </div>
+
+        <div class="flex flex-col z-20 justify-center text-center">
+          <h2 class="hero-intro-text text-white text-lg">
+            Built for developers who demand extraordinary performance. Inspired
+            by ancient wisdom, powered by modern technology.
+          </h2>
+        </div>
+
+        <div
+          class="hero-badges z-20 flex flex-row sm:gap-5 gap-3 flex-wrap items-center lg:justify-start justify-center my-4"
+        >
+          <span
+            class="badge badge-outline-primary text-[#ff8f5f] bg-[#eb7b4b] bg-opacity-25"
+            >Version 0.0.1 - Beta</span
+          >
+          <span
+            class="badge badge-outline-primary text-[#ff8f5f] bg-[#eb7b4b] bg-opacity-25"
+            >Made for the Future</span
+          >
+        </div>
+      </div>
+
+      <div class="z-20 flex flex-col items-center justify-end justify-self-end">
+        <div
+          class="w-[600px] rounded-s-2xl relative overflow-hidden bg-gradient-to-b from-stone-900 via-[#eb7b4b35] to-transparent"
+        >
+          <div
+            class="bg-gradient-to-t from-stone-900 to-stone-800 text-opacity-70 px-4 py-1 font-mono flex items-center justify-between gap-1"
+          >
+            <span class="text-stone-400">~/main.cy</span>
+            <span class="flex items-center justify-center gap-2">
+              <span class="dots"></span>
+              <span class="dots"></span>
+              <span class="dots"></span>
+            </span>
+          </div>
+          <div class="w-full h-full mask-code border-s-8 border-stone-900">
+            <Image
+              class="w-full rounded-s-lg"
+              src={ExampleCode1}
+              alt="Example Cyrus Code"
+            />
+          </div>
+
+          <div
+            class="flex flex-col items-center justify-center w-full absolute bottom-10"
+          >
+            <button
+              class="flex items-center justify-center text-xl hover:text-gray-50 text-gray-300 z-20 w-full text-center py-12 bg-gradient-to-b from-transparent via-black/25 to-transparent"
+            >
+              Explore more about cyrus
+              <ArrowRightIcon class="ml-2 mt-0.5 size-4" />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div
-      class="flex flex-wrap items-center z-20 gap-2 justify-around mx-auto mt-8 px-4 lg:w-9/12 w-full bg-gradient-to-t from-transparent via-black/25 to-transparent py-4"
+      class="grid grid-flow-rows lg:grid-cols-4 grid-cols-2 md:grid-rows-1 grid-rows-3 items-start z-20 gap-2 justify-center mx-auto px-4 w-full bg-gradient-to-b from-transparent via-black/75 to-transparent py-6"
     >
       <div class="hreo-grid-item">
-        <CpuChipIcon class="text-[#eb7b4b] size-5" />
+        <CpuChipIcon class="text-[#eb7b4b] size-5 flex-none" />
         <span>GCCJIT Powered</span>
       </div>
       <div class="hreo-grid-item">
-        <WwwIcon class="text-[#eb7b4b] size-5" />
+        <WwwIcon class="text-[#eb7b4b] size-5 flex-none" />
         <span>Cross-Platform</span>
       </div>
-      <div class="hreo-grid-item">
-        <SparkelsIcon class="text-[#eb7b4b] size-5" />
+      <div class="hreo-grid-item md:col-span-1 col-span-2">
+        <SparkelsIcon class="text-[#eb7b4b] size-5 flex-none" />
         <span>Zero-Cost Abstractions</span>
       </div>
-      <div class="hreo-grid-item">
-        <BinaryIcons class="text-[#eb7b4b] size-5" />
+      <div class="hreo-grid-item sm:col-span-1 col-span-2">
+        <BinaryIcons class="text-[#eb7b4b] size-5 flex-none" />
         <span>Native Performance</span>
       </div>
     </div>
-
-    <div class="flex flex-row z-20 gap-3 mt-5">
-      <button class="btn btn-primary text-xs md:text-md">
-        Download Cyrus
-        <ArrowRightIcon class="ml-2 size-4" />
-      </button>
-      <button class="btn btn-solid-primary text-xs md:text-md">View Docs</button
-      >
-    </div>
-  </div>
+  </HeroHeader>
 
   <div
     id="section1"
@@ -132,11 +167,6 @@ import RocketIcon from "../components/icons/rocket-icon.astro";
         <button class="btn btn-primary">Explore Docs</button>
       </div>
     </div>
-    <Image
-      class="border-2 border-primary rounded-xl"
-      src={ExampleCode1}
-      alt="Example Cyrus Code"
-    />
   </div>
 
   <hr class="section-separator mt-12 mb-8" />
@@ -174,48 +204,34 @@ import RocketIcon from "../components/icons/rocket-icon.astro";
     }
   }
 
-  .hero {
-    position: relative;
-    background-image: url(../assets/hero-background.webp);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  .hero-logo {
+    @apply block lg:w-52 w-48;
+  }
 
-    .hero-background-shade {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 5;
-      background: rgb(20, 10, 5);
-      background: linear-gradient(
-        0deg,
-        rgba(20, 10, 5, 0.596) 0%,
-        rgba(20, 10, 5, 1) 100%
-      );
-    }
+  .hero-intro-text {
+    margin-left: auto;
+    margin-right: auto;
 
-    .hero-logo {
-      @apply block lg:w-48 w-32;
-    }
+    @apply px-2 lg:text-start;
+  }
+  .hero-slogan {
+    background: rgb(245, 245, 245);
+    background: linear-gradient(90deg, #f5f5f5 0%, #eb7b4b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-    .hero-intro-text {
-      margin-left: auto;
-      margin-right: auto;
+    @apply text-wrap w-full text-7xl py-4 lg:text-start text-center;
+  }
 
-      @apply px-2 sm:w-10/12 lg:w-9/12 w-full text-sm sm:text-base;
-    }
-    .hero-slogan {
-      background: rgb(245, 245, 245);
-      background: linear-gradient(90deg, #f5f5f5 0%, #eb7b4b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  .hreo-grid-item {
+    @apply flex items-center justify-center gap-2 text-sm text-white py-6 px-1 lg:px-5 text-nowrap hover:opacity-70 transition-opacity duration-200;
+  }
 
-      @apply text-wrap w-full lg:text-7xl text-5xl sm:px-4 px-2 leading-9 py-4;
-    }
+  .mask-code {
+    mask-image: linear-gradient(black, transparent);
+  }
 
-    .hreo-grid-item {
-      @apply flex items-center justify-center gap-2 text-xs md:text-sm text-white flex-1 py-6 px-1 lg:px-5 text-nowrap hover:bg-black/20 hover:shadow-xl transition-all duration-200;
-    }
+  .dots {
+    @apply rounded-full bg-stone-700 size-3;
   }
 </style>
